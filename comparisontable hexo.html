@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+layout: false 
+---
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tinox R2280 vs Chemours R350</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="" style="width: 800px;height:100px; margin-left:auto; margin-right: auto;">
+	<table cellspacing="10">
+		<h1 style="font-family: Microsoft YaHei; font-size:20px; margin-left: 0px; margin-top: 50px;">Tinox R-2280 application in plastic industry comparison table</h1>
+		<tr>
+			<td width="auto" align="right"><a style="font-family: Microsoft Yahei; font-size: 10px; margin-left: inherit">Choose your application</a></td>
+			<td width="auto" align="left">
+				<select class="form-control" onchange="ShowImage(parseInt(this.value), 'media');">
+    				<option selected="selected" value="1">In gray PVC</option>
+    				<option value="2">In white PVC</option>
+    				<option value="3">In PP injection</option>
+					<option value="4">In PE film</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div id="media1">
+    	<div id="GPVC" style="width: 800px;height:400px; margin-left:auto; margin-right: auto;"></div>
+			<div style="width: 800px;height:100px; margin-left:auto; margin-right: auto;">
+				<table>
+					<p style="font-family: Microsoft YaHei; font-size:10px;" align="right"><a style="background-color: #275597; color: white">You can click on the legend key to show/hide data.</a></p>
+					<p style="font-family: Microsoft YaHei; font-size:10px">TiO<sub>2</sub> Content= 2.0PHR;&nbsp;TiO<sub>2</sub>:Carbon black=20:1</p>
+					<tr>
+						<td><p style="font-family: Microsoft YaHei; font-size:10px">These results are from the lab test, it could be different to real application;</p></td>
+						<td style="text-align: right;font-family: Microsoft YaHei; font-size: 10px"><a>You can click on the legend key to show/hide data.</a></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	<div id="media2">
+		<div id="WPVC" style="width: 800px;height:400px; margin-left:auto; margin-right: auto;"></div>
+		<div style="width: 800px;height:100px; margin-left:auto; margin-right: auto;">
+				<table>
+					<p style="font-family: Microsoft YaHei; font-size:10px;" align="right"><a style="background-color: #275597; color: white">You can click on the legend key to show/hide data.</a></p>
+					<p style="font-family: Microsoft YaHei; font-size:10px">TiO<sub>2</sub> Content= 4.0PHR</p>
+					<tr>
+						<td><p style="font-family: Microsoft YaHei; font-size:10px">These results are from the lab test, it could be different to real application;</p></td>
+						<td style="text-align: right;font-family: Microsoft YaHei; font-size: 10px"><a>You can click on the legend key to show/hide data.</a></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	<div id="media3">
+		<div id="PP" style="width: 800px;height:400px; margin-left:auto; margin-right: auto;"></div>
+		<div style="width: 800px;height:100px; margin-left:auto; margin-right: auto;">
+			<table>
+				<p style="font-family: Microsoft YaHei; font-size:10px;" align="right"><a style="background-color: #275597; color: white">You can click on the legend key to show/hide data.</a></p>
+				<p style="font-family: Microsoft YaHei; font-size:10px">TiO<sub>2</sub> Content= 3.0%;</p>
+				<p style="font-family: Microsoft YaHei; font-size:10px">Injection Temperature: 220℃</p>
+				<tr>
+					<td><p style="font-family: Microsoft YaHei; font-size:10px">These results are from the lab test, it could be different to real application;</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="media4">
+		<div id="PE" style="width: 800px;height:400px; margin-left:auto; margin-right: auto;"></div>
+		<div style="width: 800px;height:100px; margin-left:auto; margin-right: auto;">
+			<table>
+				<p style="font-family: Microsoft YaHei; font-size:10px;" align="right"><a style="background-color: #275597; color: white">You can click on the legend key to show/hide data.</a></p>
+				<p style="font-family: Microsoft YaHei; font-size:10px">TiO<sub>2</sub> Content= 10%</p>
+				<p style="font-family: Microsoft YaHei; font-size:10px">Film thinkness: 20μm</p>
+					<tr>
+							<td><p style="font-family: Microsoft YaHei; font-size:10px">These results are from the lab test, it could be different to real application;</p></td>
+							
+					</tr>
+			</table>
+		</div>
+	</div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+			//LonmonBillions R108
+        var GPVCChart = echarts.init(document.getElementById('GPVC'));
+		var WPVCChart = echarts.init(document.getElementById('WPVC'));
+		var PPChart = echarts.init(document.getElementById('PP'));
+		var PEChart = echarts.init(document.getElementById('PE'));
+		
+        // 指定图表的配置项和数据
+			//LonmonBillions R108
+        var GPVC = {
+			title: {text: 'Tinox R-2280 Color in Gray PVC Comparison table'},
+            legend: {
+				selectedMode:true,
+				//orient: 'vertical',
+				x: 'center',
+				y: 50,
+				data: ['Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+				selected: {
+					'Tinox R-2280': true,
+					'LM R-108': false,
+					'DJ R-2400': false,
+					'Chemours R350': true,
+					'Huntsman R-FC5': false,
+					'Huntsman TR28': false,
+				}
+			},
+            tooltip: {},
+            // 调整距离div边框的距离，分别是 左，上，右，下
+            grid:{
+              x:30,
+              y:100,
+              x2:50,
+              y2:50,
+            },
+            dataset: {
+                // 提供一份数据。
+                source: [
+                    ['product', 'Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+                    ['L*value', 66.54,65.76,65.27,65.05,66.04,66.05],
+					['a*value*10', -6.6,-4.8,-3.5,-5.0,-6.1,-6.1],
+					['b*value*10', -21.8,-6.4,-2.9,-8.5,-12.9,-8.6],
+					['R.Tinting strength', 104.7,101.8,100,99.2,102.8,102.9],
+					['Undertone',-18.0,-14.3,-13.4,-14.9,-15.9,-14.9]
+                ]
+            },
+            // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
+            xAxis: {type: 'category'},
+            // 声明一个 Y 轴，数值轴。
+            yAxis: {
+              min: -25,
+              max: 130
+            },
+            // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+            series: [
+                {type: 'bar', color: '#275597'},
+                {type: 'bar', color: '#60acfc'},
+				{type: 'bar', color: '#32d3eb'},
+				{type: 'bar', color: '#70AD47'},
+                {type: 'bar', color: '#feb64d'},
+				{type: 'bar', color: '#ff7c7c'}
+            ]
+        };
+		var WPVC = {
+			title: {text: 'Tinox R-2280 Color in White PVC Comparison table'},
+            legend: {
+				selectedMode:true,
+				//orient: 'vertical',
+				x: 'center',
+				y: 50,
+				data: ['Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+				selected: {
+					'Tinox R-2280': true,
+					'LM R-108': false,
+					'DJ R-2400': false,
+					'Chemours R350': true,
+					'Huntsman R-FC5': false,
+					'Huntsman TR28': false,
+				}
+			},
+            tooltip: {},
+            // 调整距离div边框的距离，分别是 左，上，右，下
+            grid:{
+              x:30,
+              y:100,
+              x2:50,
+              y2:50,
+            },
+            dataset: {
+                // 提供一份数据。
+                source: [
+                    ['product', 'Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+                    ['L*value', 97.51,97.33,97.12,97.55,97.27,97.29],
+					['a*value*100', -68,-62,-61,-71,-64,-63],
+					['b*value*100', 164,189,221,151,183,201],
+					['W(CIE)', 86.42,84.86,83.84,87.09,84.93,84.20]
+                ]
+            },
+            // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
+            xAxis: {type: 'category'},
+            // 声明一个 Y 轴，数值轴。
+            yAxis: {
+              min: -85,
+              max: 200
+            },
+            // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+            series: [
+                {type: 'bar', color: '#275597'},
+                {type: 'bar', color: '#60acfc'},
+				{type: 'bar', color: '#32d3eb'},
+				{type: 'bar', color: '#70AD47'},
+                {type: 'bar', color: '#feb64d'},
+				{type: 'bar', color: '#ff7c7c'}
+            ]
+        };
+		var PP = {
+			title: {text: 'Tinox R-2280 Color in PP Comparison table'},
+            legend: {
+				selectedMode:true,
+				//orient: 'vertical',
+				x: 'center',
+				y: 50,
+				data: ['Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+				selected: {
+					'Tinox R-2280': true,
+					'LM R-108': false,
+					'DJ R-2400': false,
+					'Chemours R350': true,
+					'Huntsman R-FC5': false,
+					'Huntsman TR28': false,
+				}
+			},
+            tooltip: {},
+            // 调整距离div边框的距离，分别是 左，上，右，下
+            grid:{
+              x:30,
+              y:100,
+              x2:50,
+              y2:50,
+            },
+            dataset: {
+                // 提供一份数据。
+                source: [
+                    ['product', 'Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+                    ['L*value', 98.37,98.31,97.83,98.64,98.01,97.85],
+					['a*value*100', -45,-41,-29,-42,-34,-26],
+					['b*value*100', 175,212,235,168,202,195],
+					['W(CIE)', 88.12,86.34,84.22,89.13,86.01,85.92]
+                ]
+            },
+            // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
+            xAxis: {type: 'category'},
+            // 声明一个 Y 轴，数值轴。
+            yAxis: {
+              min: -50,
+              max: 250
+            },
+            // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+            series: [
+                {type: 'bar', color: '#275597'},
+                {type: 'bar', color: '#60acfc'},
+				{type: 'bar', color: '#32d3eb'},
+				{type: 'bar', color: '#70AD47'},
+                {type: 'bar', color: '#feb64d'},
+				{type: 'bar', color: '#ff7c7c'}
+            ]
+        };
+		var PE = {
+			title: {text: 'Tinox R-2280 Color in PE Comparison table'},
+            legend: {
+				selectedMode:true,
+				//orient: 'vertical',
+				x: 'center',
+				y: 50,
+				data: ['Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+				selected: {
+					'Tinox R-2280': true,
+					'LM R-108': false,
+					'DJ R-2400': false,
+					'Chemours R350': true,
+					'Huntsman R-FC5': false,
+					'Huntsman TR28': false,
+				}
+			},
+            tooltip: {},
+            // 调整距离div边框的距离，分别是 左，上，右，下
+            grid:{
+              x:30,
+              y:100,
+              x2:50,
+              y2:50,
+            },
+            dataset: {
+                // 提供一份数据。
+                source: [
+                    ['product', 'Tinox R-2280', 'LM R-108', 'DJ R-2400','Chemours R350','Huntsman R-FC5','Huntsman TR28'],
+                    ['L*value', 98.71,98.67,98.25,99.54,98.65,98.39],
+					['a*value*100', -46,-37,-34,-49,-39,-32],
+					['b*value*100', 126,154,215,111,161,157],
+					['W(CIE)', 91.16,89.82,87.16,93.96,89.45,88.96],
+					['L.T, %', 36.1,37.4,38.7,37.6,37.2,36.5]
+                ]
+            },
+            // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
+            xAxis: {type: 'category'},
+            // 声明一个 Y 轴，数值轴。
+            yAxis: {
+              min: -60,
+              max: 250
+            },
+            // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+            series: [
+                {type: 'bar', color: '#275597'},
+                {type: 'bar', color: '#60acfc'},
+				{type: 'bar', color: '#32d3eb'},
+				{type: 'bar', color: '#70AD47'},
+                {type: 'bar', color: '#feb64d'},
+				{type: 'bar', color: '#ff7c7c'}
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+			//LonmonBillions R108
+        GPVCChart.setOption(GPVC);
+		WPVCChart.setOption(WPVC);
+		PPChart.setOption(PP);
+		PEChart.setOption(PE);
+    </script>
+	<script>
+		function ShowImage(page, tag){
+    var i = 1;
+    var el;
+    while (el = document.getElementById(tag + i)) {
+        if (i == page)
+        el.style.display = 'block';
+        else
+        el.style.display = 'none';
+        i++;
+    }
+}
+</script>
+</body>
+</html>
