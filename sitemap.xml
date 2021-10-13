@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tio2.info/2021/10/13/Analysis-of-Titanium-Dioxide-Output-of-Sep-2020/</loc>
+    
+    <lastmod>2021-10-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tio2.info/2021/10/13/LB-group-leads-another-price-increasing-trend/</loc>
     
     <lastmod>2021-10-13</lastmod>
@@ -1076,6 +1083,20 @@
   
   <url>
     <loc>https://tio2.info/tags/LB-group/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tio2.info/tags/China-tio2-output/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tio2.info/tags/China-tio2-output-analysis/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
