@@ -7,34 +7,33 @@
 	.st1{fill:#1B2D81;}
 </style>
 <g>
-	<circle class="st0" cx="77.8" cy="71.5" r="11.4"/>
-	<circle class="st0" cx="106.7" cy="32.9" r="11.4"/>
-	<circle class="st0" cx="108.8" cy="113.9" r="11.4"/>
-	<circle class="st0" cx="126.6" cy="75" r="11.4"/>
-	<circle class="st0" cx="141.1" cy="59.6" r="11.4"/>
-	<circle class="st0" cx="191.7" cy="71.3" r="11.4"/>
-	<circle class="st0" cx="159.4" cy="40" r="11.4"/>
-	<circle class="st0" cx="162.6" cy="125.6" r="11.4"/>
-	<circle class="st0" cx="99.5" cy="139.9" r="11.4"/>
-	<circle class="st0" cx="74.9" cy="187.1" r="11.4"/>
-	<circle class="st0" cx="133.7" cy="173.6" r="11.4"/>
-	<circle class="st0" cx="130.5" cy="194.2" r="11.4"/>
-	<circle class="st0" cx="166.3" cy="217.6" r="11.4"/>
-	<circle class="st0" cx="193.6" cy="186.8" r="11.4"/>
-	
-		<ellipse transform="matrix(3.327792e-02 -0.9994 0.9994 3.327792e-02 -128.4507 320.88)" class="st0" cx="101.6" cy="226.8" rx="11.4" ry="11.4"/>
-	<circle class="st1" cx="73.6" cy="29.1" r="17.2"/>
-	<circle class="st1" cx="126" cy="29.1" r="17.2"/>
-	<circle class="st1" cx="134.8" cy="20.9" r="17.2"/>
-	<circle class="st1" cx="187.8" cy="29.1" r="17.2"/>
-	<circle class="st1" cx="157.6" cy="84" r="17.2"/>
-	<circle class="st1" cx="105.4" cy="76" r="17.2"/>
-	<circle class="st1" cx="128.7" cy="130.1" r="17.2"/>
-	<circle class="st1" cx="99" cy="183.6" r="17.2"/>
-	<circle class="st1" cx="161.8" cy="174.6" r="17.2"/>
-	<circle class="st1" cx="138.7" cy="220.2" r="17.2"/>
-	<circle class="st1" cx="123.9" cy="236.6" r="17.2"/>
-	<circle class="st1" cx="72" cy="230.5" r="17.2"/>
-	<circle class="st1" cx="187.2" cy="231.6" r="17.2"/>
+	<circle class="st0" cx="33.4" cy="80.1" r="10.2"/>
+	<circle class="st0" cx="59.3" cy="45.4" r="10.2"/>
+	<circle class="st0" cx="61.2" cy="118" r="10.2"/>
+	<circle class="st0" cx="77.1" cy="83.1" r="10.2"/>
+	<circle class="st0" cx="90.1" cy="69.4" r="10.2"/>
+	<circle class="st0" cx="135.4" cy="79.9" r="10.2"/>
+	<circle class="st0" cx="106.5" cy="51.9" r="10.2"/>
+	<circle class="st0" cx="109.3" cy="128.4" r="10.2"/>
+	<circle class="st0" cx="52.8" cy="141.2" r="10.2"/>
+	<circle class="st0" cx="30.8" cy="183.5" r="10.2"/>
+	<circle class="st0" cx="83.6" cy="171.3" r="10.2"/>
+	<circle class="st0" cx="80.6" cy="189.8" r="10.2"/>
+	<circle class="st0" cx="112.7" cy="210.8" r="10.2"/>
+	<circle class="st0" cx="137" cy="183.3" r="10.2"/>
+	<circle class="st0" cx="54.9" cy="219.1" r="10.2"/>
+	<circle class="st1" cx="29.6" cy="42" r="15.4"/>
+	<circle class="st1" cx="76.5" cy="42" r="15.4"/>
+	<circle class="st1" cx="84.4" cy="34.9" r="15.4"/>
+	<circle class="st1" cx="131.8" cy="42" r="15.4"/>
+	<circle class="st1" cx="104.8" cy="91.3" r="15.4"/>
+	<circle class="st1" cx="58" cy="84.1" r="15.4"/>
+	<circle class="st1" cx="79.1" cy="132.5" r="15.4"/>
+	<circle class="st1" cx="52.5" cy="180.4" r="15.4"/>
+	<circle class="st1" cx="108.7" cy="172.3" r="15.4"/>
+	<circle class="st1" cx="88.1" cy="213" r="15.4"/>
+	<circle class="st1" cx="74.7" cy="227.8" r="15.4"/>
+	<circle class="st1" cx="28.2" cy="222.3" r="15.4"/>
+	<circle class="st1" cx="131.4" cy="223.2" r="15.4"/>
 </g>
 </svg>
